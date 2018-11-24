@@ -19,11 +19,13 @@ Title! As noted in the original post, this has larger implications, as installin
 
 ### quick demonstration of problem + using proposed solution:
 
-1. follow below reproduction steps OR ...clone this repo
-3. `npm i` and `npm test`
-4. step `7` of below reproduction steps is observed.
+follow below reproduction steps OR ...
 
-### reproduction steps (of how I made all of code)
+1. clone this repo
+2. `npm i` and `npm test`
+3. step `7` of below reproduction steps is observed.
+
+### reproduction steps of issue
 
 1. `expo init`
 2. choose template tabs
