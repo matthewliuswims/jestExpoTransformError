@@ -5,7 +5,7 @@
 Title! As noted in the original post, this has larger implications, as installing new packages besides the bootstrapped ones results in jest not working.
 
 
-### proposed solution to the problem + using proposed solution?
+### proposed solution to the problem?
 
 [answer](https://github.com/expo/expo/issues/2595#issuecomment-440966998) is a very good one, but it seems to make only some of the jest tests work. This repo demonstrates this.
 
