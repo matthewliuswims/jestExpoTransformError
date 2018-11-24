@@ -1,13 +1,13 @@
-## [expo issue 2959] (https://github.com/expo/expo/issues/2595#issuecomment-441362040)
+## [expo issue 2959](https://github.com/expo/expo/issues/2595#issuecomment-441362040)
 
 
 ### what is the problem?
-Jest transform error repro in tabs project template. As noted in the original post, this has larger implications, as installing new packages besides the bootstrapped ones results in jest not working.
+Title! As noted in the original post, this has larger implications, as installing new packages besides the bootstrapped ones results in jest not working.
 
 
 ### proposed solution to the problem?
 
-[answer] (https://github.com/expo/expo/issues/2595#issuecomment-440966998) is a very good one, but it seems to make only some of the jest tests work. This repo demonstrates this.
+[answer](https://github.com/expo/expo/issues/2595#issuecomment-440966998) is a very good one, but it seems to make only some of the jest tests work. This repo demonstrates this.
 
 ### environment
 1. Node version: 10.7.0
@@ -20,9 +20,9 @@ Jest transform error repro in tabs project template. As noted in the original po
 
 1. expo init
 2. choose template tabs
-3. `rm -rf node_modules` # to set the slate 'clean'
+3. `rm -rf node_modules` - to set the slate 'clean'
 4. `npm i jest-expo --save-dev`
-5. `touch jest.config.js` and added below to file
+5. `touch jest.config.js` - and added below to file
 
 ```
 module.exports = {
@@ -33,12 +33,13 @@ module.exports = {
 };
 ```
 
-6. changed `"test": "node ./node_modules/jest/bin/jest.js --watchAll"` in package.json to `"test": "jest"` #NOTE: the jest node module no longer even exists at this point....
-7. result: jest is now working, but the two bootstrapped jest tests in App-test.js do NOT work (while StyledTest-test.js does)
+6. changed `"test": "node ./node_modules/jest/bin/jest.js --watchAll"` in package.json to `"test": "jest"` NOTE: the jest node module no longer even exists at this point....which makes sense why previous command no longer succesfully runs
+
+7. `npm test` - jest at this point is now working, but the two bootstrapped jest tests in App-test.js do NOT work (while StyledTest-test.js does)
 
 ### NOTE: 
 
-1. removing after step `6` of reproduction steps
+1. After step `6` of reproduction steps, removing
 `  "jest": {
     "preset": "jest-expo"
   },` in package.json does not change results
