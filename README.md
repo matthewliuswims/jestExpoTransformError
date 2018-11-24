@@ -52,5 +52,82 @@ module.exports = {
 
 
 
+### error msg dump of step `7.` of reproduction steps
+```
+$ npm test
+
+> my-new-project@ test /Users/mattscoo/Desktop/expoExample/ariana/jestExpoTransformError
+> jest
+
+ PASS  components/__tests__/StyledText-test.js
+ FAIL  __tests__/App-test.js (20.013s)
+  ● Console
+
+    console.error node_modules/react-test-renderer/cjs/react-test-renderer.development.js:8075
+      The above error occurred in the <App> component:
+          in App (at App-test.js:14)
+
+      Consider adding an error boundary to your tree to customize error handling behavior.
+      Visit https://fb.me/react-error-boundaries to learn more about error boundaries.
+    console.error node_modules/react-test-renderer/cjs/react-test-renderer.development.js:8075
+      The above error occurred in the <App> component:
+          in App (at App-test.js:19)
+
+      Consider adding an error boundary to your tree to customize error handling behavior.
+      Visit https://fb.me/react-error-boundaries to learn more about error boundaries.
+
+  ● App snapshot › renders the loading screen
+
+    TypeError: Cannot read property 'default' of undefined
+
+      4 | import AppNavigator from './navigation/AppNavigator';
+      5 |
+    > 6 | export default class App extends React.Component {
+        |                                                                                                                                   ^
+      7 |   state = {
+      8 |     isLoadingComplete: false,
+      9 |   };
+
+      at new App (App.js:6:387)
+      at constructClassInstance (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:4810:18)
+      at updateClassComponent (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6581:5)
+      at beginWork (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:7408:16)
+      at performUnitOfWork (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:10149:12)
+      at workLoop (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:10181:24)
+      at renderRoot (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:10267:7)
+      at performWorkOnRoot (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:11135:7)
+      at performWork (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:11047:7)
+      at performSyncWork (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:11021:3)
+
+  ● App snapshot › renders the root without loading screen
+
+    TypeError: Cannot read property 'default' of undefined
+
+      4 | import AppNavigator from './navigation/AppNavigator';
+      5 |
+    > 6 | export default class App extends React.Component {
+        |                                                                                                                                   ^
+      7 |   state = {
+      8 |     isLoadingComplete: false,
+      9 |   };
+
+      at new App (App.js:6:387)
+      at constructClassInstance (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:4810:18)
+      at updateClassComponent (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6581:5)
+      at beginWork (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:7408:16)
+      at performUnitOfWork (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:10149:12)
+      at workLoop (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:10181:24)
+      at renderRoot (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:10267:7)
+      at performWorkOnRoot (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:11135:7)
+      at performWork (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:11047:7)
+      at performSyncWork (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:11021:3)
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   1 passed, 1 total
+Time:        25.233s
+Ran all test suites.
+npm ERR! Test failed.  See above for more details.
+```
 
 
