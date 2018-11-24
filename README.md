@@ -17,7 +17,7 @@ Title! As noted in the original post, this has larger implications, as installin
 
 ----
 
-### quick demonstration of problem:
+### quick demonstration of problem + using proposed solution:
 
 1. follow below reproduction steps OR ...clone this repo
 3. `npm i` and `npm test`
