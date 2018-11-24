@@ -52,7 +52,7 @@ module.exports = {
   },` in package.json does not change results
 2. After step `6` of reproduction steps, if I do `rm -rf node_modules` and `npm i` the results are also the same.
 
-
+----
 
 ### error msg dump of step `7.` of reproduction steps
 ```
