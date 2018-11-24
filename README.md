@@ -15,8 +15,13 @@ Title! As noted in the original post, this has larger implications, as installin
 3. Mac OS High Sierra 
 4. Expo version: 2.4.0
 
+### quick demonstration of problem:
 
-### reproduction steps
+1. follow below reproduction steps OR ...clone this repo
+3. `npm i` and `npm test`
+4. step `7` of below repdouction steps is observed.
+
+### reproduction steps (of how I made all of code)
 
 1. expo init
 2. choose template tabs
