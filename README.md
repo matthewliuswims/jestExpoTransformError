@@ -25,7 +25,7 @@ Title! As noted in the original post, this has larger implications, as installin
 
 ### reproduction steps (of how I made all of code)
 
-1. expo init
+1. `expo init`
 2. choose template tabs
 3. `rm -rf node_modules` - to set the slate 'clean'
 4. `npm i jest-expo --save-dev`
